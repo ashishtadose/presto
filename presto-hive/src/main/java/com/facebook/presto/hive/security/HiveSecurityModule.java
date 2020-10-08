@@ -31,6 +31,7 @@ public class HiveSecurityModule
         bindSecurityModule("file", new FileBasedAccessControlModule());
         bindSecurityModule("read-only", new ReadOnlySecurityModule());
         bindSecurityModule("sql-standard", new SqlStandardSecurityModule());
+        bindSecurityModule("ranger", new RangerBasedAccessControlModule());
     }
 
     private void bindSecurityModule(String name, Module module)
